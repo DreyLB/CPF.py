@@ -1,8 +1,9 @@
 import random
 #from Avançando import linha
-#from time import sleep
+from time import sleep
 #linha('GERANDO UM NOVO CPF')
-#sleep(0.5)
+print('GERANDO UM NOVO CPF')
+sleep(0.5)
 soma1 = 0
 soma2 = 0
 cont = 0
@@ -17,11 +18,13 @@ while True:
             c -= 9
             v2 = int(cpf[c]) * (11 - c)
             soma2 = soma2 + v2
+    
     #Digito 1
     if 11 - (soma1 % 11) > 9:
         novo += '0'
     elif 11 - (soma1 % 11) <= 9:
-        novo += str(11 - (soma1 % 11))
+        novo += str(11 - (soma1 % 11))    
+    
     #Digito 2
     novo += str(11 - (soma2 % 11))
     soma1 *= 0
