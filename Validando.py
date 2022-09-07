@@ -1,5 +1,4 @@
 from time import sleep
-#from Avançando import linha
 soma1 = 0
 soma2 = 0
 while True:
@@ -14,6 +13,7 @@ while True:
             c -= 9
             v2 = int(cpf[c]) * (11 - c)
             soma2 = soma2 + v2
+    
     while True:                                       #Digito 1
         if 11 - (soma1 % 11) > 9:
             if int(cpf[9]) == 0:
@@ -27,12 +27,11 @@ while True:
             print('ERRO! CPF INVÁLIDO')
             break
         sleep(1)
+        
         if 11 - (soma2 % 11) == int(cpf[10]):         #Digito 2
-#            linha('CPF VÁLIDO')
             print('CPF VÁLIDO')
             break
         else:
-#            linha('ERRO! CPF INVÁLIDO')
             print('ERRO! CPF INVÁLIDO')
             break
     soma1 *= 0
